@@ -37,7 +37,7 @@ namespace ClientDM.win
 
         private void g(object sender, RoutedEventArgs e)
         {
-            
+            NavigationService.Navigate(new page());
         }
     }
 }

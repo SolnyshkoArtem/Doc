@@ -31,7 +31,28 @@ namespace FDocmanInter
         void NewLetter(List<object> lett);
 
         [OperationContract]
-        void DeleteLetter(string id);
+        string DeleteLetter(string id);
+
+        [OperationContract]
+        string UpdateLetter(List<string> lett);
+
+        [OperationContract]
+        List<string> GetUsers();
+
+        [OperationContract]
+        void NewUse(List<string> use);
+
+        [OperationContract]
+        void DeleteUser(string nam);
+
+        [OperationContract]
+        void SetPath(string path);
+
+        [OperationContract]
+        string ReturnPath();
+
+        [OperationContract]
+        string ReturnPut();
     }
 }
 //public partial class Letter

@@ -41,8 +41,9 @@ namespace ClientDM.win
             {
                 return;
             }
-            proxy.DeleteLetter(letters.SelectedItem.ToString());
-            letters.ItemsSource = strings;
+            string _;
+            _ = proxy.DeleteLetter(letters.SelectedItem.ToString());
+            letters.ItemsSource = proxy.GetListOfLetters();
         }
         private void btnAdd_click(object sender, RoutedEventArgs e)
         {
@@ -56,14 +57,14 @@ namespace ClientDM.win
 
         private void poisk_TextChanged(object sender, TextChangedEventArgs e)
         {
-            try
-            {
-                letters.ItemsSource = strings.Where(item => item == poisk.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            //try
+            //{
+            //    letters.ItemsSource = strings.Where(item => item == poisk.Text);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.ToString(), "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
         }
 
         private void letters_MouseDoubleClick(object sender, MouseButtonEventArgs e)

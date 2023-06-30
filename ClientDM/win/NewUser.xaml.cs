@@ -1,7 +1,6 @@
 ﻿using FDocmanInter;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -18,31 +17,28 @@ using System.Windows.Shapes;
 namespace ClientDM.win
 {
     /// <summary>
-    /// Логика взаимодействия для ConcrLetter.xaml
+    /// Логика взаимодействия для NewUser.xaml
     /// </summary>
-    public partial class ConcrLetter : Window
+    public partial class NewUser : Window
     {
         ChannelFactory<IDocService> channelFactory;
         IDocService proxy;
-        List<string> list = new List<string>();
-        string id;
-        public ConcrLetter(string a)
+        public NewUser()
         {
             InitializeComponent();
             channelFactory = new ChannelFactory<IDocService>("DocManServiceEndPoint");
             proxy = channelFactory.CreateChannel();
-            id = a;
-            list = proxy.GetConcrLetter(a);
-            _1.Text = list[0];
-            _2.Text = list[1];
-            _3.Text = list[2];
-            _4.Text = list[3];
-            _5.Text = list[4];
         }
 
-        private void ForPDF_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start(list[5]);
+            List<string> use = new List<string>();
+            use.Add(name.Text);
+            use.Add(unit.Text);
+            proxy.NewUse(use);
+            Close();
+
+
         }
     }
 }

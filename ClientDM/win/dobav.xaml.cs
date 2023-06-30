@@ -29,6 +29,8 @@ namespace ClientDM.win
         string put;
         List<object> objects = new List<object>();
         Dictionary<string, int> keyValuePairs= new Dictionary<string, int>();
+        DealFiles deal = new DealFiles();
+        string filenames;
         public dobav()
         {
             InitializeComponent();
@@ -66,16 +68,17 @@ namespace ClientDM.win
                 return;
             }
 
-            
 
+            int r;
             objects.Add(suble.Text);
             objects.Add(krat.Text);
             objects.Add(from.Text);
-            objects.Add(keyValuePairs[pol.Text]);
+            
+            objects.Add(pol.Text);
             objects.Add((DateTime)rec.SelectedDate);
             objects.Add((DateTime)exp.SelectedDate);
 
-
+            put = deal.newLetter(filenames, Convert.ToString(objects[0]));
             objects.Add("На обработке");
             objects.Add(put);
             objects.Add("");
@@ -83,18 +86,12 @@ namespace ClientDM.win
 
                 proxy.NewLetter(objects);
                 MessageBox.Show("Письмо добавлено!", "Оповещение!");
-                NavigationService.Navigate(new doc());
-            
-                
-            
-
-            
-            
-            
+                NavigationService.Navigate(new doc());   
         }
         
         private void BtnFile_Click(object sender, RoutedEventArgs e)
         {
+            
             // Configure open file dialog box
             var dialog = new Microsoft.Win32.OpenFileDialog();
             dialog.FileName = "Document"; // Default file name
@@ -108,9 +105,11 @@ namespace ClientDM.win
             if (result == true)
             {
                 // Open document
-                string filename = dialog.FileName;
-                put = filename;
+                filenames = dialog.FileName;
+                
             }
+            
+
         }
     }
 }

@@ -75,8 +75,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="DealFiles.cs" />
     <Compile Include="page.xaml.cs">
       <DependentUpon>page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="win\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
     <Compile Include="win\cho.xaml.cs">
       <DependentUpon>cho.xaml</DependentUpon>
@@ -95,6 +99,9 @@
     </Compile>
     <Compile Include="win\nach.xaml.cs">
       <DependentUpon>nach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="win\NewUser.xaml.cs">
+      <DependentUpon>NewUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="win\polip.cs" />
   </ItemGroup>
@@ -144,6 +151,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="win\Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="win\cho.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,6 +176,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="win\nach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="win\NewUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,6 +1,8 @@
 ﻿using FDocmanInter;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -24,24 +26,27 @@ namespace ClientDM.win
         ChannelFactory<IDocService> channelFactory;
         IDocService proxy;
         string id;
+        string trueId;
+        List<string> list = new List<string>();
         public ConcrLetterPriem(string a)
         {
             InitializeComponent();
             channelFactory = new ChannelFactory<IDocService>("DocManServiceEndPoint");
             proxy = channelFactory.CreateChannel();
             id = a;
-            var list = proxy.GetConcrLetter(a);
+            list = proxy.GetConcrLetter(a);
             _1.Text = list[0];
             _2.Text = list[1];
             _3.Text = list[2];
             _4.Text = list[3];
             _5.Text = list[4];
             _7.Text = list[6];
+            trueId = list[7];
         }
 
         private void ForPDF_Click(object sender, RoutedEventArgs e)
         {
-
+            Process.Start(list[5]);
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
@@ -52,6 +57,12 @@ namespace ClientDM.win
             _4.IsReadOnly = false;
             _5.IsReadOnly = false;
             _7.IsReadOnly = false;
+            CultureInfo info = new CultureInfo("ru");
+            
+
+
+            var i = DateTime.Parse(_4.Text, info, DateTimeStyles.AdjustToUniversal);
+
 
         }
 
@@ -61,9 +72,12 @@ namespace ClientDM.win
             lost.Add(_1.Text);
             lost.Add(_2.Text);
             lost.Add(_3.Text);
+            lost.Add(_7.Text);
             lost.Add(_4.Text);
             lost.Add(_5.Text);
-            lost.Add(_7.Text);
+            lost.Add(trueId);
+            string _;
+            _ = proxy.UpdateLetter(lost);
         }
     }
 }

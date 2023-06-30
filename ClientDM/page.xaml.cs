@@ -41,7 +41,13 @@ namespace ClientDM
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             int a;
-                
+            if(log.Text == "Администратор")
+            {
+                NavigationService.Navigate(new Admin());
+            }
+            else
+            {
+
             try
             {
                 a = proxy.GetIDToEnter(log.Text);
@@ -59,6 +65,8 @@ namespace ClientDM
             {
                 MessageBox.Show(ex.Message);
             }
+            }
+                
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

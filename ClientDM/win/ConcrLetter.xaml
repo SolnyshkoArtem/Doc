@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="ConcrLetter" Height="500" Width="446">
     <StackPanel Background="Gray">
-        <Label HorizontalAlignment="Center" Margin="0,80,0,0">Название</Label>
-        <TextBox HorizontalAlignment="Center" x:Name="_1" MinWidth="150"></TextBox>
-        <Label HorizontalAlignment="Center">Описание</Label>
-        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_2"></TextBox>
-        <Label HorizontalAlignment="Center">От кого</Label>
-        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_3"></TextBox>
-        <Label HorizontalAlignment="Center">Дата получения</Label>
-        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_4"></TextBox>
-        <Label HorizontalAlignment="Center">Срок</Label>
-        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_5"></TextBox>
-        <Button x:Name="ForPDF" Width="100" Click="ForPDF_Click">Просмотреть</Button>
+        <Label HorizontalAlignment="Center" Margin="0,80,0,0" FontFamily="Montserrat regular" FontSize="16">Название</Label>
+        <TextBox HorizontalAlignment="Center" x:Name="_1" MinWidth="150" FontFamily="Montserrat regular" FontSize="16"></TextBox>
+        <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="16">Описание</Label>
+        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_2" FontFamily="Montserrat regular" FontSize="16"></TextBox>
+        <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="16">От кого</Label>
+        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_3" FontFamily="Montserrat regular" FontSize="16"></TextBox>
+        <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="16">Дата получения</Label>
+        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_4" FontFamily="Montserrat regular" FontSize="16"></TextBox>
+        <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="16">Срок</Label>
+        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_5" FontFamily="Montserrat regular" FontSize="16"></TextBox>
+        <Button x:Name="ForPDF" Width="100" Click="ForPDF_Click" Style="{StaticResource b}" Height="31">Просмотреть</Button>
     </StackPanel>
 </Window>

@@ -5,22 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClientDM.win"
         mc:Ignorable="d"
-        Title="ConcrLetterPriem" Height="472" Width="408">
+        Title="ConcrLetterPriem" Height="500" Width="408">
     <StackPanel Background="Gray" Margin="0,0,-18,-10">
         <Label HorizontalAlignment="Center" Margin="0,0,0,0" FontFamily="Montserrat regular" FontSize="18">Название</Label>
-        <TextBox HorizontalAlignment="Center" x:Name="_1" MinWidth="150" IsReadOnly="True"></TextBox>
+        <TextBox HorizontalAlignment="Center" x:Name="_1" MinWidth="150" IsReadOnly="True" FontFamily="Montserrat regular" FontSize="16"></TextBox>
         <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="18">Описание</Label>
-        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_2" IsReadOnly="True"></TextBox>
+        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_2" IsReadOnly="True" FontFamily="Montserrat regular" FontSize="16"></TextBox>
         <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="18">От кого</Label>
-        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_3" IsReadOnly="True"></TextBox>
+        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_3" IsReadOnly="True" FontFamily="Montserrat regular" FontSize="16"></TextBox>
         <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="18">Кому</Label>
-        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_7" IsReadOnly="True"></TextBox>
-        <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="18">Дата получения</Label>
-        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_4" IsReadOnly="True"></TextBox>
+        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_7" IsReadOnly="True" FontFamily="Montserrat regular" FontSize="16"></TextBox>
+        <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="18" >Дата получения</Label>
+        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_4" IsReadOnly="True" FontFamily="Montserrat regular" FontSize="16"></TextBox>
         <Label HorizontalAlignment="Center" FontFamily="Montserrat regular" FontSize="18">Срок</Label>
-        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_5" IsReadOnly="True"></TextBox>
-        <Button x:Name="ForPDF" Width="112" Click="ForPDF_Click" FontFamily="Montserrat regular" FontSize="15">Просмотреть</Button>
-        <Button x:Name="Edit" Width="126"  HorizontalAlignment="Right" Click="Edit_Click" FontFamily="Montserrat regular" FontSize="15">Редактировать</Button>
-        <Button x:Name="Savea" Width="126"  HorizontalAlignment="Right" Click="Savea_Click" FontFamily="Montserrat regular" FontSize="15">Сохранить</Button>
+        <TextBox HorizontalAlignment="Center" MinWidth="150" x:Name="_5" IsReadOnly="True" FontFamily="Montserrat regular" FontSize="16"></TextBox>
+        <Button x:Name="ForPDF" Style="{StaticResource b}" Width="112" Click="ForPDF_Click" FontFamily="Montserrat regular" FontSize="15" Height="33">Просмотреть</Button>
+        <Button x:Name="Edit" Width="126" Style="{StaticResource b}" HorizontalAlignment="Right" Click="Edit_Click" FontFamily="Montserrat regular" FontSize="15" Height="26">Редактировать</Button>
+        <Button x:Name="Savea" Width="126" Style="{StaticResource b}" HorizontalAlignment="Right" Click="Savea_Click" FontFamily="Montserrat regular" FontSize="15" Height="23">Сохранить</Button>
+        <!--<TextBlock TextWrapping="Wrap" Text="TextBlock" Name="txt"/>-->
     </StackPanel>
 </Window>

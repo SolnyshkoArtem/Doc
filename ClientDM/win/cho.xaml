@@ -28,7 +28,7 @@
             </Grid.RowDefinitions>
             <Button Grid.Row="0" Content="Добавление письма" Click="btnNewDoc_click" Width="auto" Style="{StaticResource b}"/>
             <Button Grid.Row="1" Content="Просмотр всех писем" Click="btnDoc_click" Width="auto" Style="{StaticResource b}"/>
-            <Button Grid.Row="2" Content="На всякий" Click="g" Width="auto" Style="{StaticResource b}"/>
+            <Button Grid.Row="2" Content="Выход" Click="g" Width="auto" Style="{StaticResource b}"/>
         </Grid>
     </Grid>
 </Page>

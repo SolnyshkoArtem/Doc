@@ -53,12 +53,12 @@
             </TextBlock>
             <Button Content="Войти" Click="BtnLogin_Click"  Grid.Row="2" VerticalAlignment="Top" Grid.Column="1" Width="auto" Style="{StaticResource b}"/>
 
-            <CheckBox FontFamily="Montserrat Regular" FontSize="13" Grid.Column="1" Content="Запомнить меня" Margin="0,0,0,20" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Bottom" Checked="CheckBox_Checked">
+            <!--<CheckBox FontFamily="Montserrat Regular" FontSize="13" Grid.Column="1" Content="Запомнить меня" Margin="0,0,0,20" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Bottom" Checked="CheckBox_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.75" ScaleY="1.75" />
                 </CheckBox.LayoutTransform>
-            </CheckBox>
+            </CheckBox>-->
         </Grid>
-        <Button Content="adm" Click="Button_Click" Grid.Row="2" Grid.Column="2" Style="{StaticResource b}"/>
+        <!--<Button Content="adm" Click="Button_Click" Grid.Row="2" Grid.Column="2" Style="{StaticResource b}"/>-->
     </Grid>
 </Page>
